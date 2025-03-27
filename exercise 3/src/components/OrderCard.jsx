@@ -1,18 +1,19 @@
 import React from "react";
 
-export default function OrderCard() {
-  return (
-    <div className="order">
-      <div>
-        <h4>TODO NAME</h4>
-        <small>TODO PRICE</small>
-      </div>
+export default function OrderCard({orders, dcr, inc}) {
 
-      <div className="order-quantity">
-        <div className="order-button">-</div>
-        <h4>TODO PRICE</h4>
-        <div className="order-button">+</div>
+  return (
+      <div className="order">
+        <div>
+          <h4>{orders.product}</h4>
+          <small>$ {orders.price}</small>
+        </div>
+
+        <div className="order-quantity">
+          <div className="order-button" onClick={dcr}>-</div>
+          <h4>{orders.quantity}</h4>
+          <div className="order-button" onClick={inc}>+</div>
+        </div>
       </div>
-    </div>
   );
 }

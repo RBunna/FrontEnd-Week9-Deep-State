@@ -27,7 +27,7 @@ export default function App() {
         <h1>My Stuff</h1>
       </header>
 
-      <StuffForm></StuffForm>
+      <StuffForm stuffs={stuffs} setStuffs={setStuffs}></StuffForm>
 
       <div className="stuff-list">
         {stuffs.map((stuff, index) => (
